@@ -106,3 +106,7 @@ main img {
   display: block;
   margin-bottom: 15px;
 }
+h3 {
+  background-color: blue;
+  color: beige;
+}
