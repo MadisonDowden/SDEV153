@@ -190,6 +190,7 @@ footer {
 
   body {
     background-image: linear-gradient(to bottom, #FFFFFF 20%, #90C7E3 60%, #FFFFFF 100%);
+    background-repeat: no-repeat;
 }
 nav ul {
     padding-left: 10%;
