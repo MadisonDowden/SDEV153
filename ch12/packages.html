@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pacific Trails Resort :: Packages</title>
+<meta charset="utf-8">
+<meta name="description" content="Choose Pacific Trails Resort trip packages and calculate the total price.">
+<meta name="keywords" content="Pacific Trails, yurt packages, trip packages, resort packages">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="pacific.css" rel="stylesheet">
+<script>
+function calculateTotal() {
+    var packages = document.querySelectorAll('input[name="package"]:checked');
+    var total = 0;
+
+    for (var i = 0; i < packages.length; i++) {
+        total += Number(packages[i].value);
+    }
+
+    alert("Your total is $" + total);
+}
+</script>
+</head>
+<body>
+
+<header>
+<h1><a href="index.html">Pacific Trails Resort</a></h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="yurts.html">Yurts</a></li>
+<li><a href="activities.html">Activities</a></li>
+<li><a href="reservations.html">Reservations</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="shopmals.html">ShopMals</a></li>
+<li><a href="packages.html">Packages</a></li>
+</ul>
+</nav>
+
+<div id="wrapper">
+<div id="yurthero"></div>
+
+<main>
+<h2>Pacific Trails Packages</h2>
+
+<p>Select the package or packages you are interested in and click the button to calculate your total.</p>
+
+<form id="packageForm">
+<label>
+<input type="checkbox" name="package" value="450">
+Weekend Escape Package - $450
+</label>
+
+<label>
+<input type="checkbox" name="package" value="750">
+Zen Retreat Package - $750
+</label>
+
+<label>
+<input type="checkbox" name="package" value="600">
+Kayak Away Package - $600
+</label>
+
+<input type="button" value="Calculate Total" onclick="calculateTotal()">
+</form>
+
+</main>
+
+<footer>
+Copyright &copy; 2020 Pacific Trails Resort<br>
+<a href="mailto:madison@dowden.com">madison@dowden.com</a>
+</footer>
+
+</div>
+</body>
+</html>
