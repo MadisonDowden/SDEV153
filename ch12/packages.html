@@ -7,6 +7,7 @@
 <meta name="keywords" content="Pacific Trails, yurt packages, trip packages, resort packages">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="pacific.css" rel="stylesheet">
+
 <script>
 function calculateTotal() {
     var packages = document.querySelectorAll('input[name="package"]:checked');
@@ -16,7 +17,7 @@ function calculateTotal() {
         total += Number(packages[i].value);
     }
 
-    alert("Your total is $" + total);
+    document.getElementById("total").innerHTML = "Total: $" + total;
 }
 </script>
 </head>
@@ -37,32 +38,37 @@ function calculateTotal() {
 <li><a href="packages.html">Packages</a></li>
 </ul>
 </nav>
+
 <div id="wrapper">
 <div id="yurthero"></div>
 
 <main>
 <h2>Pacific Trails Packages</h2>
 
-<p>Select the package or packages you are interested in and click the button to calculate your total.</p>
+<p>Select the package(s) you are interested in and click the button to calculate your total.</p>
 
 <form id="packageForm">
+
 <label>
 <input type="checkbox" name="package" value="450">
 Weekend Escape Package - $450
-</label>
+</label><br><br>
 
 <label>
 <input type="checkbox" name="package" value="750">
 Zen Retreat Package - $750
-</label>
+</label><br><br>
 
 <label>
 <input type="checkbox" name="package" value="600">
 Kayak Away Package - $600
-</label>
+</label><br><br>
 
 <input type="button" value="Calculate Total" onclick="calculateTotal()">
+
 </form>
+
+<h3 id="total"></h3>
 
 </main>
 
