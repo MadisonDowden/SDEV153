@@ -8,15 +8,19 @@
 
 <script>
 function validateForm() {
-    const phoneNumber = document.getElementById("myPhone").value;
-    const regex = /^\d{3}-\d{3}-\d{4}$/;
 
-    if (regex.test(phoneNumber)) {
-        return true;
-    } else {
-        alert("Invalid phone number: include a dash after the area code and a dash after the first 3 digits (example: 123-456-7890).");
+    var phoneNumber = document.getElementById("myPhone").value;
+
+    var regex = /^\d{3}-\d{3}-\d{4}$/;
+
+    if (!regex.test(phoneNumber)) {
+
+        alert("Invalid phone number. Please use this format: 123-456-7890");
+
         return false;
     }
+
+    return true;
 }
 </script>
 
@@ -40,15 +44,20 @@ function validateForm() {
 </nav>
 
 <div id="wrapper">
+
 <div id="reshero"></div>
 
 <main>
+
 <h2>Reservations at Pacific Trails</h2>
 
 <h3>Contact Us</h3>
+
 <p>Required fields are marked with an asterisk*</p>
 
-<form method="post" action="https://webdevbasics.net/scripts/pacific.php" onsubmit="return validateForm();">
+<form method="post"
+action="https://webdevbasics.net/scripts/pacific.php"
+onsubmit="return validateForm();">
 
 <label for="myFName">*First Name:</label>
 <input type="text" name="myFName" id="myFName" required>
@@ -56,7 +65,6 @@ function validateForm() {
 <label for="myLName">*Last Name:</label>
 <input type="text" name="myLName" id="myLName" required>
 
-<!-- Mailing Address -->
 <label for="myMailAddress">Mailing Address:</label>
 <input type="text" name="myMailAddress" id="myMailAddress">
 
@@ -67,29 +75,50 @@ function validateForm() {
 <input type="text" name="myCity" id="myCity" required>
 
 <label for="myState">*State:</label>
-<input type="text" name="myState" id="myState" minlength="2" maxlength="2" required>
+<input type="text"
+name="myState"
+id="myState"
+minlength="2"
+maxlength="2"
+required>
 
 <label for="myZip">*Zip Code:</label>
-<input type="text" name="myZip" id="myZip" minlength="5" maxlength="9" required>
+<input type="text"
+name="myZip"
+id="myZip"
+minlength="5"
+maxlength="9"
+required>
 
 <label for="myEmail">*E-mail:</label>
 <input type="email" name="myEmail" id="myEmail" required>
 
 <label for="myPhone">*Phone Number:</label>
-<input type="tel" name="myPhone" id="myPhone" required>
+<input type="tel"
+name="myPhone"
+id="myPhone"
+placeholder="123-456-7890"
+required>
 
 <label for="myArrival">Arrival Date:</label>
 <input type="date" name="myArrival" id="myArrival">
 
-<!-- Departure Date -->
 <label for="myDeparture">Departure Date:</label>
 <input type="date" name="myDeparture" id="myDeparture">
 
 <label for="myNights">Nights from 1 to 14:</label>
-<input type="number" name="myNights" id="myNights" min="1" max="14">
+<input type="number"
+name="myNights"
+id="myNights"
+min="1"
+max="14">
 
 <label for="myComments">Comments:</label>
-<textarea name="myComments" id="myComments" rows="2" cols="30"></textarea>
+
+<textarea name="myComments"
+id="myComments"
+rows="2"
+cols="30"></textarea>
 
 <input type="submit" value="Submit">
 
@@ -98,8 +127,13 @@ function validateForm() {
 </main>
 
 <footer>
-Copyright © 2020 Pacific Trails Resort<br>
-<a href="mailto:yourname@email.com">yourname@email.com</a>
+
+Copyright &copy; 2020 Pacific Trails Resort<br>
+
+<a href="mailto:yourname@email.com">
+yourname@email.com
+</a>
+
 </footer>
 
 </div>
