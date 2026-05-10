@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript Practice</title>
+<meta charset="utf-8">
+
+<script>
+function calculateTotal() {
+
+    let total = 0;
+
+    if (document.getElementById("weekend").checked) {
+        total += 450;
+    }
+
+    if (document.getElementById("zen").checked) {
+        total += 600;
+    }
+
+    if (document.getElementById("kayak").checked) {
+        total += 500;
+    }
+
+    alert("Total cost: $" + total);
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Select Your Package</h1>
+
+<input type="checkbox" id="weekend"> Weekend Escape ($450)<br><br>
+<input type="checkbox" id="zen"> Zen Retreat ($600)<br><br>
+<input type="checkbox" id="kayak"> Kayak Away ($500)<br><br>
+
+
+<button onclick="calculateTotal();">Calculate Total</button>
+
+</body>
+</html>
